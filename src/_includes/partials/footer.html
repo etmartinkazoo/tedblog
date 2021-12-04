@@ -11,26 +11,13 @@
                                 </a>
                                 <p>Care | Inform | Activate</p>
                                 <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/standupwtp" target="_blank">
-                                            <i class="icofont-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/standup_mi" target="_blank">
-                                            <i class="icofont-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.linkedin.com/in/stand-up-michigan-084a8b1a8/" target="_blank">
-                                            <i class="icofont-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCogsHLKjccD_5J3w_8BjPkQ?view_as=subscriber" target="_blank">
-                                            <i class="icofont-youtube-play"></i>
-                                        </a>
-                                    </li>
+                                    {% for social in globals.data.social_accounts %}
+                                        <li class="test">
+                                            <a href="{{ social.url }}" target="_blank">
+                                                <i class="{{ social.icon_code }}"></i>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>

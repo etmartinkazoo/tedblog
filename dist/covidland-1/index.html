@@ -63,26 +63,36 @@
                 <div class="right">
 
                     <ul class="social-icon">
-                        <li>
-                            <a href="https://standupmichigan.locals.com/" target="_blank">
-                                <i class="icofont-locals"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCogsHLKjccD_5J3w_8BjPkQ?view_as=subscriber" target="_blank">
-                                <i class="icofont-youtube"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/standupwtp" target="_blank">
-                                <i class="icofont-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/standup_mi" target="_blank">
-                                <i class="icofont-twitter"></i>
-                            </a>
-                        </li>
+                        
+                            <li class="test">
+                                <a href="https://standupmichigan.locals.com" target="_blank">
+                                    <i class="icofont-users-social"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="test">
+                                <a href="https://www.youtube.com/channel/UCogsHLKjccD_5J3w_8BjPkQ?view_as=subscriber" target="_blank">
+                                    <i class="icofont-youtube"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="test">
+                                <a href="https://www.facebook.com/standupwtp" target="_blank">
+                                    <i class="icofont-facebook"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="test">
+                                <a href="https://twitter.com/standup_mi" target="_blank">
+                                    <i class="icofont-twitter"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="test">
+                                <a href="https://www.linkedin.com/in/stand-up-michigan-084a8b1a8/" target="_blank">
+                                    <i class="icofont-linkedin"></i>
+                                </a>
+                            </li>
                         
                     </ul>
 
@@ -162,51 +172,51 @@
         <div class="col-md-8">
             <h1 class="text-center mb-5">Buy Now!</h1>
             <div id="smart-button-container">
-                <div style="text-align: center;">
-                  <div id="paypal-button-container"></div>
-                </div>
-              </div>
-            <script src="https://www.paypal.com/sdk/js?client-id=AVsj_1ncsq37RAUycBoRZJi8CjUYO8m0Gj5VJZ9BcDzFUu0FNprx6YdKlrB3MdI_NrQ2SgeGfEMCrjAE&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-            <script>
-              function initPayPalButton() {
-                paypal.Buttons({
-                  style: {
-                    shape: 'rect',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
-                    
-                  },
+    <div style="text-align: center;">
+      <div id="paypal-button-container"></div>
+    </div>
+  </div>
+<script src="https://www.paypal.com/sdk/js?client-id=AVsj_1ncsq37RAUycBoRZJi8CjUYO8m0Gj5VJZ9BcDzFUu0FNprx6YdKlrB3MdI_NrQ2SgeGfEMCrjAE&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  function initPayPalButton() {
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{"description":"COVIDLAND 1 DVD","amount":{"currency_code":"USD","value":25}}]
+        });
+      },
+
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
           
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{"description":"COVIDLAND 1 DVD","amount":{"currency_code":"USD","value":25}}]
-                    });
-                  },
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
           
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(orderData) {
-                      
-                      // Full available details
-                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-          
-                      // Show a success message within this page, e.g.
-                      const element = document.getElementById('paypal-button-container');
-                      element.innerHTML = '';
-                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
-          
-                      // Or go to another URL:  actions.redirect('thank_you.html');
-                      
-                    });
-                  },
-          
-                  onError: function(err) {
-                    console.log(err);
-                  }
-                }).render('#paypal-button-container');
-              }
-              initPayPalButton();
-            </script>
+        });
+      },
+
+      onError: function(err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+</script>
         </div>
     </div>
 </div>
@@ -223,26 +233,37 @@
                                 </a>
                                 <p>Care | Inform | Activate</p>
                                 <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/standupwtp" target="_blank">
-                                            <i class="icofont-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/standup_mi" target="_blank">
-                                            <i class="icofont-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.linkedin.com/in/stand-up-michigan-084a8b1a8/" target="_blank">
-                                            <i class="icofont-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UCogsHLKjccD_5J3w_8BjPkQ?view_as=subscriber" target="_blank">
-                                            <i class="icofont-youtube-play"></i>
-                                        </a>
-                                    </li>
+                                    
+                                        <li class="test">
+                                            <a href="https://standupmichigan.locals.com" target="_blank">
+                                                <i class="icofont-users-social"></i>
+                                            </a>
+                                        </li>
+                                    
+                                        <li class="test">
+                                            <a href="https://www.youtube.com/channel/UCogsHLKjccD_5J3w_8BjPkQ?view_as=subscriber" target="_blank">
+                                                <i class="icofont-youtube"></i>
+                                            </a>
+                                        </li>
+                                    
+                                        <li class="test">
+                                            <a href="https://www.facebook.com/standupwtp" target="_blank">
+                                                <i class="icofont-facebook"></i>
+                                            </a>
+                                        </li>
+                                    
+                                        <li class="test">
+                                            <a href="https://twitter.com/standup_mi" target="_blank">
+                                                <i class="icofont-twitter"></i>
+                                            </a>
+                                        </li>
+                                    
+                                        <li class="test">
+                                            <a href="https://www.linkedin.com/in/stand-up-michigan-084a8b1a8/" target="_blank">
+                                                <i class="icofont-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -358,7 +379,7 @@
 
             <div class="copyright-area two">
                 <div class="container">
-                    <p>Copyright ©2021 Stand Up Michigan. Designed By <a href="https://brem.io/" target="_blank">Brem.io</a></p>
+                    <p>Copyright ©2021 Stand Up Michigan. Made by <a href="https://brem.io/" target="_blank">Brem.io</a></p>
                 </div>
             </div>
 
