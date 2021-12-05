@@ -41,12 +41,12 @@
                             <ul>
                                 <li>
                                     <i class="icofont-calendar"></i>
-                                    <span>20 Oct, 2020</span>
+                                    <span>{{ article.published_on }}</span>
                                 </li>
                                 <li>
                                     <i class="icofont-user-alt-4"></i>
                                     <span>By:</span>
-                                    <a href="#">{{ article.user_created }}</a>
+                                    <a href="#">Stand Up Michigan</a>
                                 </li>
                             </ul>
                             <h3>
@@ -62,7 +62,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="pagination-area">
+        <!-- <div class="pagination-area">
             <ul>
                 <li>
                     <a href="#">Prev</a>
@@ -80,7 +80,7 @@
                     <a href="#">Next</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- End Blog -->
