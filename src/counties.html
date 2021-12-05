@@ -35,9 +35,17 @@
             <p>The efforts, while enormous, always pointed toward a higher excellence. It was clear from the start that bad actors and powers of darkness would be seeking our demise. Consistent cyber threats threatened all of our means of communication on social media platforms and marketing tools. We STOPPED those threats and now enjoy full autonomy with our data and are rolling out a state of the art content and digital platform to CARE, INFORM, and ACT!</p>
             <p>Please continue to come back in the coming days and weeks as we roll out exiting tools for your and your fellow patriots.</p>
             <p>Thank you!</p>
-            {% for county in counties.data.counties %}
-                {{ county.name }}<br>
-            {% endfor %}
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            {% for county in counties %}
+                                <li class="list-group-item text-center">{{ county.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
