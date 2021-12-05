@@ -3,8 +3,8 @@
 {% include 'partials/nav.html' %}
 <div class="page-title-area title-img-one">
     <div class="title-shape">
-        <img src="assets/images/page-title/title-shape.jpg" alt="Title">
-        <img src="assets/images/banner/banner-shape2.png" alt="Title">
+        <img src="{{ '/assets/images/page-title/title-shape.jpg' | url }}" alt="Title">
+        <img src="{{ '/assets/images/banner/banner-shape2.png' | url }}" alt="Title">
     </div>
     <div class="d-table">
         <div class="d-table-cell">
@@ -35,6 +35,9 @@
             <p>The efforts, while enormous, always pointed toward a higher excellence. It was clear from the start that bad actors and powers of darkness would be seeking our demise. Consistent cyber threats threatened all of our means of communication on social media platforms and marketing tools. We STOPPED those threats and now enjoy full autonomy with our data and are rolling out a state of the art content and digital platform to CARE, INFORM, and ACT!</p>
             <p>Please continue to come back in the coming days and weeks as we roll out exiting tools for your and your fellow patriots.</p>
             <p>Thank you!</p>
+            {% for county in counties.data.counties %}
+                {{ county.name }}<br>
+            {% endfor %}
         </div>
     </div>
 </div>
