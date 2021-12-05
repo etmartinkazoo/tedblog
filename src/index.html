@@ -1,184 +1,174 @@
-{% extends "layouts/home.html" %}
+{% extends "layouts/base.html" %}
 {% block content %}
-{% include 'components/home/hero.html' %}
-<!-- About -->
-<div class="about-area two pt-100 pb-70">
-    <div class="about-shape">
-        <img src="assets/images/about-shape1.png" alt="Shape">
-    </div>
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6">
-                <div class="about-content">
-                    <div class="section-title two">
-                        <span class="sub-title">WE THE PEOPLE</span>
-                        <h2>Stand Up <span>Counties</span></h2>
-                        <p>We are a grassroots organic movement of We The People of Michigan whose vision is to reclaim and defend the rights and liberties of Michiganders. Our Mission is to equip and empower We The People to stand up for sacred values, citizen rights and constitutionally-protected freedoms.</p>
+    {% include 'components/home/hero.html' %}
+    <div class="about-area two pt-100 pb-70">
+        <div class="about-shape">
+            <img src="{{ '/assets/images/about-shape1.png' | url }}" alt="Shape">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-title two">
+                            <span class="sub-title">WE THE PEOPLE</span>
+                            <h2>Stand Up <span>Counties</span></h2>
+                            <p>We are a grassroots organic movement of We The People of Michigan whose vision is to reclaim and defend the rights and liberties of Michiganders. Our Mission is to equip and empower We The People to stand up for sacred values, citizen rights and constitutionally-protected freedoms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="{{ '/assets/images/small-town.jpg' | url }}" alt="About">
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-6">
-                <div class="about-img">
-                    <img src="assets/images/small-town.jpg" alt="About">
-                    <!-- <img src="assets/images/about-main2.jpg" alt="About"> -->
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
-<!-- End About -->
 
-<!-- Election -->
-<div class="election-area ptb-100">
-    <div class="election-shape">
-        <img src="{{ '/assets/images/about-shape1.png' | url }" alt="Shape">
-        <img src="{{ '/assets/images/about-shape1.png' | url }" alt="Shape">
-    </div>
-    <div class="container">
-        <h2>Stand Up Counties. Get Involved!</h2>
-    </div>
-</div>
-<!-- End Election -->
-
-<!-- Ideology -->
-<section id="our-mission" class="ideology-area two pt-100 pb-70">
-    <div class="container">
-        <div class="section-title two">
-            <span class="sub-title">Our Mission</span>
-            <h2>Stand Up Michigan</h2>
-            <p>We are a grassroots organic movement of We The People of Michigan whose vision is to reclaim and defend the rights and liberties of Michiganders. Our Mission is to equip and empower We The People to stand up for sacred values, citizen rights and constitutionally-protected freedoms.</p>
+    <div class="election-area ptb-100">
+        <div class="election-shape">
+            <img src="{{ '/assets/images/about-shape1.png' | url }}" alt="Shape">
+            <img src="{{ '/assets/images/about-shape1.png' | url }}" alt="Shape">
         </div>
-        <div class="row">
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="ideology-item">
-                    <img src="assets/images/care.jpeg" alt="Ideology">
-                    <div class="bottom">
-                        <h3>Care</h3>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <div class="ideology-item">
-                    <img src="assets/images/flag.jpg" alt="Ideology">
-                    <div class="bottom">
-                        <h3>Inform</h3>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
-                <div class="ideology-item">
-                    <img src="assets/images/protect.jpeg" alt="Ideology">
-                    <div class="bottom">
-                        <h3>Activate</h3>
-                    </div>
-                </div>  
-            </div>
-
+        <div class="container">
+            <h2>Stand Up Counties. Get Involved!</h2>
         </div>
     </div>
-</section>
-<!-- End Ideology -->
 
-<!-- Counter -->
-<div class="counter-area two pt-100 pb-70">
-    <div class="container">
-        <div class="row justify-content-center">
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="counter-item">
-                    <img src="assets/images/counter-shape2.png" alt="Shape">
-                    <h3>
-                        <span class="odometer" data-count="31,900">00</span>
-                    </h3>
-                    <p>YouTube Subscribers</p>
-                </div>
+    <section id="our-mission" class="ideology-area two pt-100 pb-70">
+        <div class="container">
+            <div class="section-title two">
+                <span class="sub-title">Our Mission</span>
+                <h2>Stand Up Michigan</h2>
+                <p>We are a grassroots organic movement of We The People of Michigan whose vision is to reclaim and defend the rights and liberties of Michiganders. Our Mission is to equip and empower We The People to stand up for sacred values, citizen rights and constitutionally-protected freedoms.</p>
             </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="counter-item">
-                    <img src="assets/images/counter-shape2.png" alt="Shape">
-                    <h3>
-                        <span class="odometer" data-count="375,000">00</span>
-                    </h3>
-                    <p>Group Shutdown by Facebook</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="counter-item">
-                    <img src="assets/images/counter-shape2.png" alt="Shape">
-                    <h3>
-                        <span class="odometer" data-count="115,000">00</span>
-                    </h3>
-                    <p>Page Shut Down by Facebook</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- End Counter -->
-
-<!-- Live -->
-<div class="live-area ptb-100">
-    <div class="container">
-        <div class="section-title two">
-            <span class="sub-title">Live</span>
-            <h2>Stand Up Michigan Pillars</h2>
-        </div>
-        <div class="live-content">
-            <img src="assets/images/video.png" alt="Live">
-            <div class="video-wrap">
-                <button class="js-modal-btn" data-video-url="https://www.youtube.com/embed/HY65ZMJKsLo">
-                    <i class="icofont-ui-play"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Live -->
-
-<!-- Donate -->
-<div class="donate-area two pb-100">
-    <div class="container">
-        <div class="section-title two">
-            <span class="sub-title">Donate Today</span>
-            <h2>Contribute for a Patriot's future!</h2>
-        </div>
-        
-        <div class="donate-wrap">
             <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="ideology-item">
+                        <img src="{{ '/assets/images/care.jpeg' | url }}" alt="Ideology">
+                        <div class="bottom">
+                            <h3>Care</h3>
+                        </div>
+                    </div>  
+                </div>
 
-                <div class="col-lg-7">
-                    <div class="donate-left">
-                        <h3>Your Donation Keeps the Mission Alive</h3>
-                        <a class="common-btn two" href="https://www.paypal.com/donate/?hosted_button_id=RWM538DGK6DJS">
-                            Donate Now
-                            <i class="icofont-heart"></i>
-                        </a>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="ideology-item">
+                        <img src="{{ '/assets/images/flag.jpg' | url }}" alt="Ideology">
+                        <div class="bottom">
+                            <h3>Inform</h3>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
+                    <div class="ideology-item">
+                        <img src="{{ '/assets/images/protect.jpeg' | url }}" alt="Ideology">
+                        <div class="bottom">
+                            <h3>Activate</h3>
+                        </div>
+                    </div>  
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Ideology -->
+
+    <!-- Counter -->
+    <div class="counter-area two pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <img src="{{ '/assets/images/counter-shape2.png' | url }}" alt="Shape">
+                        <h3>
+                            <span class="odometer" data-count="31900">00</span>
+                        </h3>
+                        <p>YouTube Subscribers</p>
                     </div>
                 </div>
 
-                <div class="col-lg-5">
-                    <div class="donate-right">
-                        <span>Peer-Reviewed Covid Mandates Article</span>
-                        <h3>Stand Up Michigan 2021</h3>
-                        <p>By Kristen Meghan, Sr. Industrial Hygienist Tammy Clark, OSHA Environmental Health & Safety Professional With Special Acknowledgement to Stephen Petty, P.E. C.I.H, C.S.P.</p>
-                        <a class="common-btn two" href="https://www.paypal.com/donate?hosted_button_id=JSMVY2E6XDFN8">
-                            Download Now
-                            <i class="icofont-download"></i>
-                        </a>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <img src="{{ '/assets/images/counter-shape2.png' | url }}" alt="Shape">
+                        <h3>
+                            <span class="odometer" data-count="375000">00</span>
+                        </h3>
+                        <p>Group Shutdown by Facebook</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <img src="{{ '/assets/images/counter-shape2.png' | url }}" alt="Shape">
+                        <h3>
+                            <span class="odometer" data-count="115000">00</span>
+                        </h3>
+                        <p>Page Shut Down by Facebook</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-</div>
+    <!-- End Counter -->
+
+    <!-- Live -->
+    <div class="live-area ptb-100">
+        <div class="container">
+            <div class="section-title two">
+                <span class="sub-title">Live</span>
+                <h2>Stand Up Michigan Pillars</h2>
+            </div>
+            <div class="live-content">
+                <img src="{{ '/assets/images/video.png' | url }}" alt="Live">
+                <div class="video-wrap">
+                    <button class="js-modal-btn" data-video-url="https://www.youtube.com/embed/HY65ZMJKsLo">
+                        <i class="icofont-ui-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Live -->
+
+    <!-- Donate -->
+    <div class="donate-area two pb-100">
+        <div class="container">
+            <div class="section-title two">
+                <span class="sub-title">Donate Today</span>
+                <h2>Contribute for a Patriot's future!</h2>
+            </div>
+            
+            <div class="donate-wrap">
+                <div class="row">
+
+                    <div class="col-lg-7">
+                        <div class="donate-left">
+                            <h3>Your Donation Keeps the Mission Alive</h3>
+                            <a class="common-btn two" href="https://www.paypal.com/donate/?hosted_button_id=RWM538DGK6DJS">
+                                Donate Now
+                                <i class="icofont-heart"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="donate-right">
+                            <span>Peer-Reviewed Covid Mandates Article</span>
+                            <h3>Stand Up Michigan 2021</h3>
+                            <p>By Kristen Meghan, Sr. Industrial Hygienist Tammy Clark, OSHA Environmental Health & Safety Professional With Special Acknowledgement to Stephen Petty, P.E. C.I.H, C.S.P.</p>
+                            <a class="common-btn two" href="https://www.paypal.com/donate?hosted_button_id=JSMVY2E6XDFN8">
+                                Download Now
+                                <i class="icofont-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
