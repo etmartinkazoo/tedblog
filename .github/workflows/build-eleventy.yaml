@@ -13,10 +13,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Build
         uses: TartanLlama/actions-eleventy@v1.1
+        with:
+          install_dependencies: true
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./dist
-          install_dependencies: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
