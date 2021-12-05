@@ -15,18 +15,11 @@
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="{{ '/' | url }}" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ '/news' | url }}" class="nav-link">News and Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ '/counties' | url }}" class="nav-link">Counties</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ '/shop' | url }}" class="nav-link">Shop</a>
-                        </li>
+                        {% for item in nav.data.nav_items %}
+                            <li class="nav-item">
+                                <a href="{{ '/' | url }}{{ item.url }}" class="nav-link">{{ item.name }}</a>
+                            </li>
+                        {% endfor %}
                     </ul>
 
                     <div class="side-nav">
