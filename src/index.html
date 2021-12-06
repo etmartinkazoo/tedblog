@@ -84,7 +84,7 @@
                     <div class="counter-item">
                         <img src="{{ '/assets/images/counter-shape2.png' | url }}" alt="Shape">
                         <h3>
-                            <span class="odometer" data-count="31900">00</span>
+                            <span class="odometer" data-count="{{ singletons.globalObjects.data.globals.youtube_subscribers }}">00</span>
                         </h3>
                         <p>YouTube Subscribers</p>
                     </div>
@@ -94,7 +94,7 @@
                     <div class="counter-item">
                         <img src="{{ '/assets/images/counter-shape2.png' | url }}" alt="Shape">
                         <h3>
-                            <span class="odometer" data-count="375000">00</span>
+                            <span class="odometer" data-count="{{ singletons.globalObjects.data.globals.group_shutdown_by_facebook }}">00</span>
                         </h3>
                         <p>Group Shutdown by Facebook</p>
                     </div>
@@ -104,7 +104,7 @@
                     <div class="counter-item">
                         <img src="{{ '/assets/images/counter-shape2.png' | url }}" alt="Shape">
                         <h3>
-                            <span class="odometer" data-count="115000">00</span>
+                            <span class="odometer" data-count="{{ singletons.globalObjects.data.globals.page_shutdown_by_facebook }}">00</span>
                         </h3>
                         <p>Page Shut Down by Facebook</p>
                     </div>
@@ -125,7 +125,7 @@
             <div class="live-content">
                 <img src="{{ '/assets/images/video.png' | url }}" alt="Live">
                 <div class="video-wrap">
-                    <button class="js-modal-btn" data-video-url="https://www.youtube.com/embed/HY65ZMJKsLo">
+                    <button class="js-modal-btn" data-video-url="https://www.youtube.com/embed/{{ pages.home.homeValues.data.home.youtube_video_id }}">
                         <i class="icofont-ui-play"></i>
                     </button>
                 </div>
@@ -148,10 +148,14 @@
                     <div class="col-lg-7">
                         <div class="donate-left">
                             <h3>Your Donation Keeps the Mission Alive</h3>
-                            <a class="common-btn two" href="https://www.paypal.com/donate/?hosted_button_id=RWM538DGK6DJS">
-                                Donate Now
-                                <i class="icofont-heart"></i>
-                            </a>
+                            {% for donation in paypalDonation.data.ecommerce.donations %}
+                                {% if donation.name == "PayPal" %}
+                                    <a class="common-btn two" href="{{ donation.link }}">
+                                        Donate Now
+                                        <i class="icofont-heart"></i>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
 
@@ -160,10 +164,14 @@
                             <span>Peer-Reviewed Covid Mandates Article</span>
                             <h3>Stand Up Michigan 2021</h3>
                             <p>By Kristen Meghan, Sr. Industrial Hygienist Tammy Clark, OSHA Environmental Health & Safety Professional With Special Acknowledgement to Stephen Petty, P.E. C.I.H, C.S.P.</p>
-                            <a class="common-btn two" href="https://www.paypal.com/donate?hosted_button_id=JSMVY2E6XDFN8">
-                                Download Now
-                                <i class="icofont-download"></i>
-                            </a>
+                            {% for product in paypalDonation.data.ecommerce.products %}
+                                {% if product.name == "OSHA Article" %}
+                                    <a class="common-btn two" href="{{ product.link }}">
+                                        Download Now
+                                        <i class="icofont-download"></i>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
 

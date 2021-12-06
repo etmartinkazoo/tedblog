@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const endpoint = `https://api.standupmichigan.com/graphql`;
-async function getEcommerce() {
-  const getEcommerceItems = await fetch(endpoint, {
+async function getDonation() {
+  const getDonationLink = await fetch(endpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -11,14 +11,14 @@ async function getEcommerce() {
     body: JSON.stringify({
       query: `{
         ecommerce {
-          products
           donations
+          products
         }
       }`
     }),
   });
-  const response = await getEcommerceItems.json();
+  const response = await getDonationLink.json();
   return response;
 };
 
-module.exports = getEcommerce();
+module.exports = getDonation();

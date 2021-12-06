@@ -15,7 +15,7 @@
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        {% for item in nav.data.nav_items %}
+                        {% for item in singletons.nav.data.nav_items %}
                             <li class="nav-item">
                                 <a href="{{ '/' | url }}{{ item.url }}" class="nav-link">{{ item.name }}</a>
                             </li>

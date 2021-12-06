@@ -5,6 +5,7 @@
                 <div class="left">
                     <span>Latest News:</span>
                     <a href="https://www.paypal.com/donate?hosted_button_id=JSMVY2E6XDFN8">
+                        {# {{ latestNews.data.news.title }} #}
                         Peer-Reviewed Covid Mandates Article!
                         <i class="icofont-long-arrow-right"></i>
                     </a>
@@ -13,7 +14,7 @@
             <div class="col-lg-5">
                 <div class="right">
                     <ul class="social-icon">
-                        {% for social in globals.data.social_accounts %}
+                        {% for social in singletons.globalObjects.data.globals.social_accounts %}
                             <li class="test">
                                 <a href="{{ social.url }}" target="_blank">
                                     <i class="{{ social.icon_code }}"></i>
