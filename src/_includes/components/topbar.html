@@ -4,11 +4,12 @@
             <div class="col-lg-7">
                 <div class="left">
                     <span>Latest News:</span>
-                    <a href="https://www.paypal.com/donate?hosted_button_id=JSMVY2E6XDFN8">
-                        {# {{ latestNews.data.news.title }} #}
-                        Peer-Reviewed Covid Mandates Article!
-                        <i class="icofont-long-arrow-right"></i>
-                    </a>
+                    {% for article in latestNews.data.news %}
+                        <a href="{{ '/' | url }}posts/{{ article.title | slug }}/index.html">
+                                {{ article.title }}
+                            <i class="icofont-long-arrow-right"></i>
+                        </a>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-lg-5">
