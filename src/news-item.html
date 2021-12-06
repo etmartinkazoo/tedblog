@@ -1,9 +1,9 @@
 ---
 pagination:
-    data: allNews
-    size: 1
-    alias: news
-permalink: "news/{{ allNews.data.news.title | slug }}/"
+  data: allPosts.data.news
+  size: 1
+  alias: detail
+permalink: 'posts/{{ detail.title | slug }}/index.html'
 ---
 
 {% extends 'layouts/base.html' %}
@@ -19,13 +19,10 @@ permalink: "news/{{ allNews.data.news.title | slug }}/"
             <div class="container">
 
                 <div class="title-content">
-                    <h2>{{ news.name }}</h2>
+                    <h2>{{ detail.title }}</h2>
                     <ul>
                         <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <span>Blog Details</span>
+                            <a href="{{ '/' | url }}">Home</a>
                         </li>
                     </ul>
                 </div>
@@ -41,10 +38,10 @@ permalink: "news/{{ allNews.data.news.title | slug }}/"
     <div class="container">
 
         <div class="details-img">
-            <img src="{{ '/assets/images/blog/blog-details1.jpg' | url }}" alt="Blog">
+            <img src="https://api.standupmichigan.com/assets/{{ detail.featured_image.id }}" alt="Blog">
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             
             <div class="col-lg-8">
                 <div class="details-item">
@@ -53,26 +50,19 @@ permalink: "news/{{ allNews.data.news.title | slug }}/"
                         <ul>
                             <li>
                                 <i class="icofont-calendar"></i>
-                                <span>20 Oct, 2020</span>
+                                <span>{{ detail.published_on }}</span>
                             </li>
                             <li>
                                 <i class="icofont-user-alt-4"></i>
                                 <span>By:</span>
-                                <a href="#">Admin</a>
+                                <a href="#">{{ detail.author.first_name }} {{ detail.author.last_name }}</a>
                             </li>
                         </ul>
-                        <h2>We Can Achieve Anything By Heart</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software</p>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years</p>
-                        <blockquote>
-                            <i class="icofont-quote-right"></i>
-                            Pily is excellent in their work and I really amazed to see how they managed everything throughout the year without any problem. They has an excellent sense of finance & economy.
-                            <h3><span>By:</span> Phillips Ben</h3>
-                        </blockquote>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary</p>
+                        <h2>{{ detail.title }}</h2>
+                        {{ detail.content | safe }}
                     </div>
 
-                    <div class="details-tag">
+                    {# <div class="details-tag">
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-lg-6">
                                 <div class="left">
@@ -121,12 +111,12 @@ permalink: "news/{{ allNews.data.news.title | slug }}/"
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> #}
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            {# <div class="col-lg-4">
                 <div class="widget-area">
 
                     <div class="search widget-item">
@@ -234,8 +224,8 @@ permalink: "news/{{ allNews.data.news.title | slug }}/"
                         </div>
                     </div> #}
 
-                </div>
-            </div>
+                {# </div>
+            </div> #}
 
         </div>
     </div>

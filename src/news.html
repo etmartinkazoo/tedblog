@@ -23,11 +23,11 @@
     <div class="blog-area ptb-100">
         <div class="container">
             <div class="row">
-                {% for article in pages.news.allNews.data.news %}
+                {% for article in allPosts.data.news %}
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="top">
-                                <a href="blog-details.html">
+                                <a href="{{ '/' | url }}posts/{{ article.title | slug }}/index.html">
                                     <img src="https://api.standupmichigan.com/assets/{{ article.featured_image.id }}" alt="Blog">
                                 </a>
                             </div>
@@ -44,10 +44,10 @@
                                     </li>
                                 </ul>
                                 <h3>
-                                    <a href="blog-details.html">{{ article.title }}</a>
+                                    <a href="posts/page-{{ pagination.pageNumber  }}">{{ article.title }}</a>
                                 </h3>
                                 <p>{{ article.content.slice(0, 200) | safe }}...</p>
-                                <a class="blog-btn" href="{{ article.title | slug }}">
+                                <a class="blog-btn" href="posts/page-{{ pagination.pageNumber  }}">
                                     Read More
                                     <i class="icofont-long-arrow-right"></i>
                                 </a>
