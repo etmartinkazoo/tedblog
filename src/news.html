@@ -47,7 +47,7 @@
                                     <a href="blog-details.html">{{ article.title }}</a>
                                 </h3>
                                 <p>{{ article.content.slice(0, 200) | safe }}...</p>
-                                <a class="blog-btn" href="blog-details.html">
+                                <a class="blog-btn" href="{{ article.title | slug }}">
                                     Read More
                                     <i class="icofont-long-arrow-right"></i>
                                 </a>
