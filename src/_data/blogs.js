@@ -21,6 +21,7 @@ async function getNews() {
           featured_image {
             id
           }
+          published_on
         }
       }`
     }),
