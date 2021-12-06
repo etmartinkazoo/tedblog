@@ -23,12 +23,13 @@
     <div class="blog-area ptb-100">
         <div class="container">
             <div class="row">
-                {% for article in news.data %}
+                {{ blogs.data.news | log }}
+                {% for article in blogs.data.news %}
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="top">
                                 <a href="blog-details.html">
-                                    <img src="https://api.standupmichigan.com/assets/{{ article.featured_image }}" alt="Blog">
+                                    <img src="https://api.standupmichigan.com/assets/{{ article.featured_image.id }}" alt="Blog">
                                 </a>
                             </div>
                             <div class="bottom">
@@ -40,7 +41,7 @@
                                     <li>
                                         <i class="icofont-user-alt-4"></i>
                                         <span>By:</span>
-                                        <a href="#">Stand Up Michigan</a>
+                                        <a href="#">{{ article.author.first_name }} {{ article.author.last_name }}</a>
                                     </li>
                                 </ul>
                                 <h3>
