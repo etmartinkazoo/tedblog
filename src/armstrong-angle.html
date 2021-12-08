@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+    <div class="page-title-area title-img-one">
+        <div class="title-shape">
+            <img src="{{ '/assets/images/page-title/title-shape.jpg' | url }}" alt="Title">
+            <img src="{{ '/assets/images/banner/banner-shape2.png' | url }}" alt="Title">
+        </div>
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="title-content">
+                        <h2>The Armstong Angle</h2>
+                        <ul>
+                            <li>
+                                <a href="{{ '/index' | url }}">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog-area ptb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="text-center fs-5 pb-4">The <strong><em>Armstrong Angle</em></strong> is an essential hub of pertinent links and commentary by Ron Armstrong. Check back frequently!</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        {% for article in armstrongAngle.data.armstrong_angle %}
+                            <a href="{{ '/' | url }}posts/{{ article.title | slug }}/index.html" class="list-group-item text-center">{{ article.title }} <i class="icofont-long-arrow-right"></i></a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
