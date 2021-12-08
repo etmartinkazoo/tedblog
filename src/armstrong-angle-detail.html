@@ -37,9 +37,11 @@ permalink: 'posts/{{ detail.title | slug }}/index.html'
 <div class="blog-details-area pt-100 pb-70">
     <div class="container">
 
-        <div class="details-img">
-            <img src="https://api.standupmichigan.com/assets/{{ detail.featured_image.id }}" alt="Blog">
-        </div>
+        {% if detail.featured_image.id %}
+            <div class="details-img">
+                <img src="https://api.standupmichigan.com/assets/{{ detail.featured_image.id }}" alt="Blog">
+            </div>
+        {% endif %}
 
         <div class="row justify-content-center">
             
@@ -58,7 +60,7 @@ permalink: 'posts/{{ detail.title | slug }}/index.html'
                         <ul class="list-group">
                             {% for link in detail.links %}
                                 <li class="list-group-item text-center">
-                                    <a href="{{ link.web_links }}">{{ link.link_titles }}</a>
+                                    <a href="{{ link.web_links }}" target="_blank">{{ link.link_titles }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
