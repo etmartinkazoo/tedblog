@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: allCounties.data.counties
+  data: allCounties.data.county
   size: 1
   alias: county
 permalink: 'counties/{{ county.name | slug }}/index.html'
@@ -9,7 +9,7 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
 {% extends 'layouts/base.html' %}
 {% block content %}
 <!-- Page Title -->
-{# <div class="page-title-area title-img-one">
+<div class="page-title-area title-img-one">
     <div class="title-shape">
         <img src="{{ '/assets/images/page-title/title-shape.jpg' | url }}" alt="Title">
         <img src="{{ '/assets/images/banner/banner-shape2.png' | url }}" alt="Title">
@@ -19,7 +19,7 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
             <div class="container">
 
                 <div class="title-content">
-                    <h2>{{ detail.title }}</h2>
+                    <h2>{{ county.name }}</h2>
                     <ul>
                         <li>
                             <a href="{{ '/' | url }}">Home</a>
@@ -30,7 +30,7 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
             </div>
         </div>
     </div>
-</div> #}
+</div>
 <!-- End Page Title -->
 
 <!-- Blog Details -->
@@ -48,22 +48,14 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
 
                     <div class="details-info">
                         <ul>
-                            <li>
-                                <i class="icofont-calendar"></i>
-                                {# <span>{{ detail.published_on }}</span> #}
-                            </li>
-                            <li>
-                                <i class="icofont-user-alt-4"></i>
-                                <span>By:</span>
-                                {# <a href="#">{{ detail.author.first_name }} {{ detail.author.last_name }}</a> #}
-                            </li>
+                            
                         </ul>
-                        <h2>{{ county.name }}</h2>
+                        <h2>{{ county.name }} County</h2>
                         <p>More county information to come.</p>
                         {# {{ detail.content | safe }} #}
                     </div>
 
-                    {# <div class="details-tag">
+                    <div class="details-tag">
                         <div class="row align-items-center">
                             <div class="col-sm-6 col-lg-6">
                                 <div class="left">
@@ -112,12 +104,12 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
                                     </ul>
                                 </div>
                             </div>
-                        </div> #}
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {# <div class="col-lg-4">
+            <div class="col-lg-4">
                 <div class="widget-area">
 
                     <div class="search widget-item">
@@ -130,7 +122,22 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
                     </div>
 
                     <div class="news widget-item">
-                        <h3>Recent News</h3>
+                        <h3>Recent County Emails</h3>
+                        <div class="inner">
+                            <ul class="align-items-center">
+                                <li>
+                                    <img src="{{ '/assets/images/blog/news1.jpg' | url }}" alt="Blog">
+                                </li>
+                                <li>
+                                    <i class="icofont-calendar"></i>
+                                    <span>25 Oct, 2020</span>
+                                    <h4>
+                                        <a href="#">How To Choose The Right Candidate To Vote</a>
+                                    </h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3>Recent County News</h3>
                         <div class="inner">
                             <ul class="align-items-center">
                                 <li>
@@ -211,7 +218,7 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
                         </ul>
                     </div>
 
-                    {# <div class="events-item">
+                    <div class="events-item">
                         <img src="{{ '/assets/images/blog/blog-main1.jpg' | url }}" alt="Blog">
                         <div class="bottom">
                             <h3>
@@ -223,10 +230,10 @@ permalink: 'counties/{{ county.name | slug }}/index.html'
                                 <i class="icofont-long-arrow-right"></i>
                             </a>
                         </div>
-                    </div> #}
+                    </div>
 
-                {# </div>
-            </div> #}
+                </div>
+            </div>
 
         </div>
     </div>

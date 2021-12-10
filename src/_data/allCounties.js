@@ -10,7 +10,7 @@ async function getCounties() {
     },
     body: JSON.stringify({
       query: `{
-        counties {
+        county {
           name
         }
       }`
