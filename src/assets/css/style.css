@@ -2863,7 +2863,9 @@ button:focus {
   margin-bottom: 30px;
 }
 .blog-details-area .details-img img {
-  width: auto;
+  max-width: 880px;
+  margin: 0 auto;
+  display: block;
 }
 .blog-details-area .details-item .details-info {
   margin-bottom: 30px;
