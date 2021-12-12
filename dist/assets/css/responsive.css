@@ -1010,4 +1010,9 @@
     max-width: 1125px;
   }
 }
-/*# sourceMappingURL=responsive.css.map */
+
+@media (max-width: 767px) {
+  .blog-details-area .details-img img {
+    max-width: auto;
+  }
+}
