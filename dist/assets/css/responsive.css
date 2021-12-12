@@ -1013,6 +1013,6 @@
 
 @media (max-width: 767px) {
   .blog-details-area .details-img img {
-    max-width: auto;
+    max-width: 100%;
   }
 }
