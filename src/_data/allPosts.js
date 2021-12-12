@@ -14,18 +14,18 @@ async function getNews() {
           sort: ["sort", "-published_on"],
           filter: { status: { _eq: "published" } }
         ) {
-          id
-          title
-          author {
-            first_name,
-            last_name,
-          }
-          content
-          featured_image {
             id
+            title
+            author {
+              first_name,
+              last_name,
+            }
+            content
+            featured_image {
+              id
+            }
+            published_on
           }
-          published_on
-        }
       }`
     }),
   });
