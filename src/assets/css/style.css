@@ -3973,4 +3973,14 @@ button:focus {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 767px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-hide {
+    display: none;
+  }
+}
