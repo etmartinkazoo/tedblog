@@ -148,14 +148,10 @@
                     <div class="col-lg-7">
                         <div class="donate-left">
                             <h3>Your Donation Keeps the Mission Alive</h3>
-                            {% for donation in paypalDonation.data.ecommerce.donations %}
-                                {% if donation.name == "PayPal" %}
-                                    <a class="common-btn two" href="{{ donation.link }}">
-                                        Donate Now
-                                        <i class="icofont-heart"></i>
-                                    </a>
-                                {% endif %}
-                            {% endfor %}
+                            <a class="common-btn two" href="https://give.cornerstone.cc/standupmichigan">
+                                Donate Now
+                                <i class="icofont-heart"></i>
+                            </a>
                         </div>
                     </div>
 
