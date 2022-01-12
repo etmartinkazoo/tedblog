@@ -1,38 +1,21 @@
-<div class="navbar-area sticky-top"> 
-    <!-- Menu For Mobile Device -->
-    <div class="mobile-nav">
-        <a href="{{ '/' | url }}" class="logo">
-            <img src="{{ '/assets/images/standuplogo.png' | url }}" alt="Logo">
-        </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Brem Static</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+      </ul>
     </div>
-
-    <!-- Menu For Desktop Device -->
-    <div class="main-nav two">
-        <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="{{ '/' | url }}">
-                    <img src="{{ '/assets/images/standuplogo.png' | url }}" alt="Logo">
-                </a>
-                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        {% for item in singletons.nav.data.nav_items %}
-                            <li class="nav-item">
-                                <a href="{{ '/' | url }}{{ item.url }}" class="nav-link">{{ item.name }}</a>
-                            </li>
-                        {% endfor %}
-                        <li class="nav-item">
-                            <a href="https://dashboard.standupmichigan.com" class="nav-link desktop-hide">Sign Up</a>
-                        </li>
-                    </ul>
-                    <div class="side-nav mobile-hide" style="margin-right: 15px;">
-                        <a class="right common-btn two" href="https://dash.standupmichigan.com/users/register">Sign Up</a>
-                    </div>
-                    <div class="side-nav">
-                        <a class="right common-btn two" href="https://give.cornerstone.cc/standupmichigan" target="_blank">Donate</a>
-                    </div>
-
-                </div>
-            </nav>
-        </div>
-    </div>
-</div>
+  </div>
+</nav>

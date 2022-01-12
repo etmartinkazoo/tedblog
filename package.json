@@ -15,5 +15,8 @@
     "@11ty/eleventy": "^0.12.1",
     "graphql": "^16.0.1",
     "node-fetch": "^2.6.6"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-img": "^1.0.0"
   }
 }
