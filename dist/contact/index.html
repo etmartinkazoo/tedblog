@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="/assets/css/style.css">
-        <!-- Self hosted analytics -->
-        <script>
-            (function(f, a, t, h, o, m){
-                a[h]=a[h]||function(){
-                    (a[h].q=a[h].q||[]).push(arguments)
-                };
-                o=f.createElement('script'),
-                m=f.getElementsByTagName('script')[0];
-                o.async=1; o.src=t; o.id='fathom-script';
-                m.parentNode.insertBefore(o,m)
-            })(document, window, '//stats.standupmichigan.com/tracker.js', 'fathom');
-            fathom('set', 'siteId', 'GJKBX');
-            fathom('trackPageview');
-        </script>
-
-        <title>Brem Static</title>
-
-        <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+      <title>Brem Static</title>
+      
+      <meta charset="utf-8">
+      
+      <title>Brem Static</title>
+      <meta name="description" content="JAMStack frontend for marketing sites">
+      <meta name="keywords" content="JavaScript,SEO,Marketing">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Brem LLC">
+      
+      
+      
+      <meta property="og:title" content="Brem Static">
+      <meta property="og:description" content="JAMStack frontend for marketing sites">
+      <meta property="og:url" content="/contact/">
+      
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Brem Static">
+      <meta name="twitter:description" content="JAMStack frontend for marketing sites">
+      <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
+      <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+      <script>
+        (function(f, a, t, h, o, m){
+          a[h]=a[h]||function(){
+              (a[h].q=a[h].q||[]).push(arguments)
+          };
+          o=f.createElement('script'),
+          m=f.getElementsByTagName('script')[0];
+          o.async=1; o.src=t; o.id='fathom-script';
+          m.parentNode.insertBefore(o,m)
+        })(document, window, '//stats.standupmichigan.com/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'GJKBX');
+        fathom('trackPageview');
+      </script>
     </head>
     <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,9 +62,28 @@
     
   <div class="container py-5">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <h1>Contact</h1>
-        <picture><source type="image/webp" srcset="/assets/images/X9E_pnqT1P-300.webp 300w, /assets/images/X9E_pnqT1P-600.webp 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/X9E_pnqT1P-300.jpeg 300w, /assets/images/X9E_pnqT1P-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="Demo image" loading="lazy" decoding="async" src="/assets/images/X9E_pnqT1P-300.jpeg" width="600" height="400"></picture>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Message</label>
+            <textarea class="form-control"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
   </div>
