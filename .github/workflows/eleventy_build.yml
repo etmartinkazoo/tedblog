@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      
+
 jobs:
   deploy:
     runs-on: ubuntu-20:04
@@ -25,4 +25,3 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./dist
-          cname: tedmartin.us
