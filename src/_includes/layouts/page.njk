@@ -1,4 +1,9 @@
-{% extends "layouts/base.njk" %}
-{% block content %}
+{% include 'partials/head.html' %}
+{% include 'partials/nav.html' %}
+<main>
+  {% block content %}
     {{ content | safe }}
-{% endblock %}
+  {% endblock %}
+</main>
+{% include 'partials/footer.html' %}
+{% include 'partials/foot.html' %}

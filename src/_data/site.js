@@ -8,11 +8,11 @@ const environmentSpecificVariables = {
 };
 
 module.exports = {
-  title: 'Brem Static',
-  author: 'Brem LLC',
-  email: 'info@brem.io',
-  description: 'JAMStack frontend for marketing sites',
-  keywords: ['JavaScript', 'SEO', 'Marketing'],
+  title: 'TedMartin.us',
+  author: 'Ted Martin',
+  email: 'etmartinkazoo@gmail.com',
+  description: "Ted Martin's personal blog",
+  keywords: ['writing'],
   language: 'en-US',
   favicon: {
     widths: [32, 57, 76, 96, 128, 192, 228],

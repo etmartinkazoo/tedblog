@@ -1,24 +1,29 @@
 {
-  "name": "stand-up-michigan-frontend",
+  "name": "tedmartin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal website for TedMartin",
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy build && cp src/CNAME dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "writing",
+    "blog"
+  ],
+  "author": "Ted Martin",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "dayjs": "^1.10.7",
     "graphql": "^16.0.1",
     "node-fetch": "^2.6.6",
+    "remixicon": "^2.5.0",
     "slugify": "^1.6.5"
   },
   "devDependencies": {
-    "@11ty/eleventy-img": "^1.0.0"
+    "@11ty/eleventy-img": "^1.0.0",
+    "moment-timezone": "^0.5.34"
   }
 }
