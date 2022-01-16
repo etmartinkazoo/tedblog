@@ -15,7 +15,7 @@
   "author": "Ted Martin",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "dayjs": "^1.10.7",
     "graphql": "^16.0.1",
     "node-fetch": "^2.6.6",
