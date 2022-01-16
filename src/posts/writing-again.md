@@ -13,4 +13,4 @@ Writing has always given me energy, joy, and deep satisfaction. It is something 
 
 Writing is healing because it places something of our vulnerability and intimacy before others. Yes, many are cruel in their judgement but we also learn we have less to fear than we think.
 
-I look forward to writing more in the coming days and months!
+I look forward to writing more in the coming days and months, cheers!
