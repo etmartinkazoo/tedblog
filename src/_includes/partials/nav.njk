@@ -5,13 +5,13 @@
       <li class="menu-item"><a href="/">Home</a></li>
       <li class="menu-item"><a href="/contact">Contact</a></li>
     </ul>
-    <ul class="mobile-menu" x-data="{ open: false }">
-      <i class="ri-menu-3-line" @click="open =! open"></i>
-      <div class="mobile-menu-items" x-show="open" x-transition>
+    <div class="mobile-menu" x-cloak x-data="{ open: false }">
+      <i class="ri-menu-3-line" @click="open = ! open"></i>
+      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition>
         <li class="mobile-menu-item"><a href="/">Home</a></li>
         <li class="mobile-menu-item"><a href="/contact">Contact</a></li>
-      </div>
-    </ul>
+      </ul>
+    </div>
   </div>
 
 </nav>
