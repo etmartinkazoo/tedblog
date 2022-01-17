@@ -1,0 +1,22 @@
+html {
+  /* Set the font globally */
+  font-family: var(--sans-font);
+}
+
+/* Make the body a nice central block */
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-size: var(--base-fontsize);
+  line-height: var(--line-height);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  max-width: 45rem;
+  padding: 0;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

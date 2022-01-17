@@ -1,12 +1,14 @@
 nav > .wrapper {
   display: grid;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 9fr 3fr;
   padding: 0 25px;
+  align-items: center;
 }
 
 .site-title {
   display: flex;
   align-items: center;
+  margin-top: 0;
 }
 
 .site-title > a {
@@ -35,7 +37,7 @@ nav > .wrapper {
   nav {
     padding: 15px 0;
   }
-  
+
   .mobile-menu {
     display: flex;
     justify-content: flex-end;
