@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addFilter("dateformat", function(dateIn) {
-      return moment(dateIn).tz('GMT').format('MMMM DD, YYYY');
+      return moment(dateIn).tz('EST').format('MMMM DD, YYYY');
     });
     return {
         markdownTemplateEngine: 'njk',

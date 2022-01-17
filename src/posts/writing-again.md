@@ -1,7 +1,7 @@
 ---
 tags: post
 title: Writing Again
-date: 2022-01-02
+date: 2022-01-16
 layout: "layouts/blog"
 ---
 

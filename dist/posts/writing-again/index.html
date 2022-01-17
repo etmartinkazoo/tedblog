@@ -43,14 +43,15 @@
   <div class="wrapper">
     <h2 class="site-title"><a href="/">TedMartin.us</a></h2>
     <ul class="menu-items">
-      <li class="menu-item"><a href="/">Home</a></li>
-      <li class="menu-item"><a href="/contact">Contact</a></li>
+      <li class="menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+      <li class="menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
     </ul>
     <div class="mobile-menu" x-cloak x-data="{ open: false }">
       <i class="ri-menu-3-line" @click="open = ! open"></i>
-      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition>
-        <li class="mobile-menu-item"><a href="/">Home</a></li>
-        <li class="mobile-menu-item"><a href="/contact">Contact</a></li>
+      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition.duration.500ms>
+        <li class="mobile-menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+        <li class="mobile-menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
+        <em>Everyone who loves has been born of God and knows God. - John 4:7</em>
       </ul>
     </div>
   </div>
@@ -60,6 +61,7 @@
   <main>
     <div class="wrapper-small">
       <h2 class="text-center">Writing Again</h2>
+      <h5 class="text-center">January 15, 2022</h5>
       <hr>
       <p>2021 was a beautiful year and a year of frustration. Beautiful because I was able to spend time with my wife, daughter, family, and friends. Frustrating because we are still in the midst of a global pandemic that is clear as mud vis a vis the right approach to life both collectively and personally. I'm not going to say more about that as there is nothing helpful to say and more importantly, I have <em>no</em> expertise in epidemiology or public health.</p>
 <p>2021 aside and behind, I want to write more this year. I'll write some things about technical persuits with code but I also want to write about the things for which I am grateful, the things I wonder about, and even the things that disturb me.</p>
