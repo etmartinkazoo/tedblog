@@ -43,14 +43,15 @@
   <div class="wrapper">
     <h2 class="site-title"><a href="/">TedMartin.us</a></h2>
     <ul class="menu-items">
-      <li class="menu-item"><a href="/">Home</a></li>
-      <li class="menu-item"><a href="/contact">Contact</a></li>
+      <li class="menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+      <li class="menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
     </ul>
     <div class="mobile-menu" x-cloak x-data="{ open: false }">
       <i class="ri-menu-3-line" @click="open = ! open"></i>
-      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition>
-        <li class="mobile-menu-item"><a href="/">Home</a></li>
-        <li class="mobile-menu-item"><a href="/contact">Contact</a></li>
+      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition.duration.500ms>
+        <li class="mobile-menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+        <li class="mobile-menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
+        <em>Everyone who loves has been born of God and knows God. - John 4:7</em>
       </ul>
     </div>
   </div>
