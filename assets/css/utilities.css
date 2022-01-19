@@ -10,10 +10,47 @@
   text-align: center;
 }
 
-.btn-primary {
-  background: var(--primary-color);
-  color: #f7f7f7;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0 solid transparent;
   padding: 7px 14px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #f7f7f7;
+}
+
+.btn-primary:hover {
+  background: #13498a;
+}
+
+/* Spinner */
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  margin-left: 15px;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
 }
