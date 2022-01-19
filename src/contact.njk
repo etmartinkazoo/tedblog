@@ -2,19 +2,22 @@
 {% block content %}
   <div class="wrapper-small">
     <h1 class="text-center">Contact</h1>
-    <form>
-      <label for="exampleInputEmail1" class="form-label">Your Name</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    
-      <label for="exampleInputEmail1" class="form-label">Your Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    
-      <label for="exampleInputEmail1" class="form-label">Subject</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    
-      <label for="exampleInputEmail1" class="form-label">Message</label>
-      <textarea class="form-control"></textarea>
-      <button type="submit" class="btn-primary">Submit</button>
+    <form method="post" x-data="contactForm()" @submit.prevent="submitData">
+      <label for="name">Your Name</label>
+      <input type="text" class="form-control" id="name" x-model="formData.name" required>
+      <label for="email">Your Email</label>
+      <input type="email" class="form-control" id="email" x-model="formData.email" required>
+      <label for="subject">Subject</label>
+      <input type="text" class="form-control" id="subject" x-model="formData.subject" required>
+      <label for="message">Message</label>
+      <textarea class="form-control" id="message" x-model="formData.message" required></textarea>
+      <input type="text" name="honeypot" style="display:none">
+      <button type="submit" class="btn btn-primary">
+        <div class="loading-wrapper">
+          Send Message
+        </div>
+      </button>
+      <p x-text="message"></p>
     </form>
   </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 const Image = require("@11ty/eleventy-img");
-const moment = require('moment-timezone');
+const { DateTime } = require("luxon");
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(src, {
@@ -25,8 +25,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/css");
     eleventyConfig.addPassthroughCopy("src/assets/js");
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-    eleventyConfig.addFilter("dateformat", function(dateIn) {
-      return moment(dateIn).tz('EST').format('MMMM DD, YYYY');
+    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+      return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toLocaleString(DateTime.DATE_MED);
     });
     return {
         markdownTemplateEngine: 'njk',

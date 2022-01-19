@@ -17,14 +17,12 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "dayjs": "^1.10.7",
     "graphql": "^16.0.1",
+    "luxon": "^2.3.0",
     "node-fetch": "^2.6.6",
-    "remixicon": "^2.5.0",
-    "slugify": "^1.6.5"
+    "remixicon": "^2.5.0"
   },
   "devDependencies": {
-    "@11ty/eleventy-img": "^1.0.0",
-    "moment-timezone": "^0.5.34"
+    "@11ty/eleventy-img": "^1.0.0"
   }
 }

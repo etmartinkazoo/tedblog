@@ -6,7 +6,7 @@
       {% for post in collections.post %}
         <li>
           <h4><a href="{{ post.url }}">{{ post.data.title }}</a></h4>
-          {{ post.data.date | dateformat }}
+          {{ post.data.date | htmlDateString }}
         </li>
       {% endfor %}
     </ul>

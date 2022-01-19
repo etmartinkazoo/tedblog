@@ -1,9 +1,9 @@
-{% include 'partials/head.html' %}
+{% include 'partials/head.njk' %}
 {% include 'partials/nav.njk' %}
 <main>
   {% block content %}
     {{ content | safe }}
   {% endblock %}
 </main>
-{% include 'partials/footer.html' %}
-{% include 'partials/foot.html' %}
+{% include 'partials/footer.njk' %}
+{% include 'partials/foot.njk' %}
