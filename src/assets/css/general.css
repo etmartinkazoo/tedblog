@@ -1,7 +1,7 @@
 html {
   /* Set the font globally */
   font-family: var(--sans-font);
-  
+  overflow-y: scroll;
 }
 
 /* Make the body a nice central block */
