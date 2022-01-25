@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <title>TedMartin.us</title>
-      {# Must appear in the first 1024 bytes: https://web.dev/charset/ #}
-      <meta charset="utf-8">
-      {# Metadata for search engines #}
-      <title>{{ site.title }}</title>
-      <meta name="description" content="{{ site.description }}">
-      <meta name="keywords" content="{{ site.keywords | join(",") }}">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="{{ site.author }}">
-      {# <link rel="canonical" href="{{ canonicalUrl }}"> #}
-      {# Set noindex: true in front matter to prevent this page from showing up on search engines #}
-      {# Open Graph social media previews #}
-      <meta property="og:title" content="{{ site.title }}">
-      <meta property="og:description" content="{{ site.description }}">
-      <meta property="og:url" content="{{ page.url }}">
-      {# Twitter card meta tags #}
-      <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="{{ site.title }}">
-      <meta name="twitter:description" content="{{ site.description }}">
-      <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
-      <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | url }}">
-      <!--
-      <script>
-        (function(f, a, t, h, o, m){
-          a[h]=a[h]||function(){
-              (a[h].q=a[h].q||[]).push(arguments)
-          };
-          o=f.createElement('script'),
-          m=f.getElementsByTagName('script')[0];
-          o.async=1; o.src=t; o.id='fathom-script';
-          m.parentNode.insertBefore(o,m)
-        })(document, window, '//stats.standupmichigan.com/tracker.js', 'fathom');
-        fathom('set', 'siteId', 'GJKBX');
-        fathom('trackPageview');
-      </script>
-      -->
+		<title>TedMartin.us</title>
+		{# Must appear in the first 1024 bytes: https://web.dev/charset/ #}
+		<meta charset="utf-8">
+		{# Metadata for search engines #}
+		<title>{{ site.title }}</title>
+		<meta name="description" content="{{ site.description }}">
+		<meta name="keywords" content="{{ site.keywords | join(",") }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="{{ site.author }}">
+		{# <link rel="canonical" href="{{ canonicalUrl }}"> #}
+		{# Set noindex: true in front matter to prevent this page from showing up on search engines #}
+		{# Open Graph social media previews #}
+		<meta property="og:title" content="{{ site.title }}">
+		<meta property="og:description" content="{{ site.description }}">
+		<meta property="og:url" content="{{ page.url }}">
+		{# Twitter card meta tags #}
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ site.title }}">
+		<meta name="twitter:description" content="{{ site.description }}">
+		<link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+		<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | url }}">
+		<script>
+			(function(f, a, t, h, o, m){
+				a[h]=a[h]||function(){
+					(a[h].q=a[h].q||[]).push(arguments)
+				};
+				o=f.createElement('script'),
+				m=f.getElementsByTagName('script')[0];
+				o.async=1; o.src=t; o.id='fathom-script';
+				m.parentNode.insertBefore(o,m)
+			})(document, window, '//stats.tedmartin.us/tracker.js', 'fathom');
+			fathom('set', 'siteId', 'QYRBH');
+			fathom('trackPageview');
+		</script>
     </head>
     <body>
