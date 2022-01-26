@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>TedMartin.us</title>
+		
+		<meta charset="utf-8">
+		
+		<title>TedMartin.us</title>
+		<meta name="description" content="Ted Martin&#39;s personal blog">
+		<meta name="keywords" content="writing">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Ted Martin">
+		
+		
+		
+		<meta property="og:title" content="TedMartin.us">
+		<meta property="og:description" content="Ted Martin&#39;s personal blog">
+		<meta property="og:url" content="/posts/foot-in-mouth/">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="TedMartin.us">
+		<meta name="twitter:description" content="Ted Martin&#39;s personal blog">
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+		<script>
+			(function(f, a, t, h, o, m){
+				a[h]=a[h]||function(){
+					(a[h].q=a[h].q||[]).push(arguments)
+				};
+				o=f.createElement('script'),
+				m=f.getElementsByTagName('script')[0];
+				o.async=1; o.src=t; o.id='fathom-script';
+				m.parentNode.insertBefore(o,m)
+			})(document, window, '//stats.tedmartin.us/tracker.js', 'fathom');
+			fathom('set', 'siteId', 'QYRBH');
+			fathom('trackPageview');
+		</script>
+    </head>
+    <body>
+
+<nav class="bg-primary">
+  <div class="wrapper">
+    <h2 class="site-title"><a href="/">TedMartin.us</a></h2>
+    <ul class="menu-items">
+      <li class="menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+      <li class="menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="mobile-menu" x-cloak x-data="{ open: false }">
+      <i class="ri-menu-3-line" @click="open = ! open"></i>
+      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition.duration.500ms>
+        <li class="mobile-menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+        <li class="mobile-menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
+        <em>Everyone who loves has been born of God and knows God. - John 4:7</em>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <main>
+    <div class="wrapper-small">
+      <h2 class="text-center">Linux Fractional Scaling Part 2</h2>
+      <h5 class="text-center">Jan 26, 2022</h5>
+      <hr>
+      <p>Yesterday I wrote a post lamenting the state of fractional scaling in Linux. Not long after I was reading some posts from the Framework Community over my lunch and read <a href="https://community.frame.work/t/using-elementary-os-on-the-framework-laptop/4453">Using elementary OS on the Framework Laptop</a> by Cassidy James who is the Co-Founder of elementary OS. In this excellent post he walks through a number of suggestions for using the Framework Laptop with Linux, including a suggestion with fractional scaling and Xrandr. I thought it would be just another hack that doesn't really work but lo and behold, this <em>actually</em> has solved all of my issues with scaling in Linux.</p>
+<p>I think it would be best to do a walkthrough video of my setup and show rather than tell as they say. In the meantime, there is the code block:</p>
+<pre class="language-bash"><code class="language-bash">xrandr --newmode <span class="token string">"3000x2000_60.00"</span>  <span class="token number">513.44</span>  <span class="token number">3000</span> <span class="token number">3240</span> <span class="token number">3568</span> <span class="token number">4136</span>  <span class="token number">2000</span> <span class="token number">2001</span> <span class="token number">2004</span> <span class="token number">2069</span>  -HSync +Vsync<br>xrandr --addmode eDP-1 <span class="token string">"3000x2000_60.00"</span><br><br>xrandr --newmode <span class="token string">"1504x1000_60.00"</span>  <span class="token number">125.19</span>  <span class="token number">1504</span> <span class="token number">1600</span> <span class="token number">1760</span> <span class="token number">2016</span>  <span class="token number">1000</span> <span class="token number">1001</span> <span class="token number">1004</span> <span class="token number">1035</span>  -HSync +Vsync<br>xrandr --addmode eDP-1 <span class="token string">"1504x1000_60.00"</span></code></pre>
+<p>The above can be placed in</p>
+<pre class="language-bash"><code class="language-bash">~/.profile</code></pre>
+<p>followed by:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.bashrc</code></pre>
+<p>and the end result is:</p>
+<p><picture><source type="image/webp" srcset="/assets/images/WznmGBneAr-300.webp 300w, /assets/images/WznmGBneAr-600.webp 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/WznmGBneAr-300.jpeg 300w, /assets/images/WznmGBneAr-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/png" srcset="/assets/images/WznmGBneAr-300.png 300w, /assets/images/WznmGBneAr-600.png 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="Linux Display Settings" loading="lazy" decoding="async" src="/assets/images/WznmGBneAr-300.jpeg" width="600" height="499"></picture></p>
+<p>I've never spent time reading the manual for xrandr but Cassidy James sure understands it, so thank you to him. It would be nice if Linux distros came with a few preset screen resolution options for fractional scaling to make the barrier to entry easier for what is unquestionably a pain point in the current Linux desktop environment landscape.</p>
+<p>Cheers!</p>
+
+    </div>
+  </main>
+
+<footer>
+  <p>Copyright ©<span x-data="{ currentDate: new Date() }" x-text="currentDate.getFullYear()" TedMartin.us</p>
+</footer>
+
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom JS -->
+    <script src="/assets/js/scripts.js"></script>
+  </body>
+</html>

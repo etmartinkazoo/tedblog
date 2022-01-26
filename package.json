@@ -23,6 +23,7 @@
     "remixicon": "^2.5.0"
   },
   "devDependencies": {
-    "@11ty/eleventy-img": "^1.0.0"
+    "@11ty/eleventy-img": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2"
   }
 }
