@@ -6,6 +6,7 @@
 @import 'utilities.css';
 @import 'nav.css';
 @import 'forms.css';
+@import 'code.css';
 
 main {
   padding: 25px 0;
