@@ -7,6 +7,7 @@ layout: "layouts/blog"
 <div style="display: flex; justify-content: center; margin-bottom: 25px;">
     {% image "./src/assets/images/news.jpg", "The News", "(min-width: 30em) 100vw, 100vw" %}
 </div>
+
 ## News
 The news is not only 24/7, it is 24/7 hyperbole, negativity, and *depressing*. The news has a very specific business model: advertising. That means they need **eyeballs** and they need *your* time. It is a clear conflict of interest.
 
