@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>TedMartin.us</title>
+		
+		<meta charset="utf-8">
+		
+		<title>TedMartin.us</title>
+		<meta name="description" content="Ted Martin&#39;s personal blog">
+		<meta name="keywords" content="writing">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Ted Martin">
+		
+		
+		
+		<meta property="og:title" content="TedMartin.us">
+		<meta property="og:description" content="Ted Martin&#39;s personal blog">
+		<meta property="og:url" content="/posts/framework-update/">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="TedMartin.us">
+		<meta name="twitter:description" content="Ted Martin&#39;s personal blog">
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="icon" type="image/png" href="/assets/images/favicon.png">
+		<script>
+			(function(f, a, t, h, o, m){
+				a[h]=a[h]||function(){
+					(a[h].q=a[h].q||[]).push(arguments)
+				};
+				o=f.createElement('script'),
+				m=f.getElementsByTagName('script')[0];
+				o.async=1; o.src=t; o.id='fathom-script';
+				m.parentNode.insertBefore(o,m)
+			})(document, window, '//stats.tedmartin.us/tracker.js', 'fathom');
+			fathom('set', 'siteId', 'QYRBH');
+			fathom('trackPageview');
+		</script>
+    </head>
+    <body>
+
+<nav class="bg-primary">
+  <div class="wrapper">
+    <h2 class="site-title"><a href="/">TedMartin.us</a></h2>
+    <ul class="menu-items">
+      <li class="menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+      <li class="menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="mobile-menu" x-cloak x-data="{ open: false }">
+      <i class="ri-menu-3-line" @click="open = ! open"></i>
+      <ul class="mobile-menu-items" x-show="open" @click.outside="open = false" x-transition.duration.500ms>
+        <li class="mobile-menu-item"><i class="ri-home-8-line"></i><a href="/">Home</a></li>
+        <li class="mobile-menu-item"><i class="ri-mail-send-line"></i><a href="/contact">Contact</a></li>
+        <em>Everyone who loves has been born of God and knows God. - John 4:7</em>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <main>
+    <div class="wrapper-small">
+      <h2 class="text-center">Framework Laptop - Part 2</h2>
+      <h5 class="text-center">Feb 25, 2022</h5>
+      <hr>
+      <div style="display: flex; justify-content: center; margin-bottom: 25px;">
+    <picture><source type="image/webp" srcset="/assets/images/Pdy4L30KgG-300.webp 300w, /assets/images/Pdy4L30KgG-600.webp 600w" sizes="(min-width: 30em) 100vw, 100vw"><source type="image/jpeg" srcset="/assets/images/Pdy4L30KgG-300.jpeg 300w, /assets/images/Pdy4L30KgG-600.jpeg 600w" sizes="(min-width: 30em) 100vw, 100vw"><img alt="The News" loading="lazy" decoding="async" src="/assets/images/Pdy4L30KgG-300.jpeg" width="600" height="368"></picture>
+</div>
+<p>One month ago, I wrote about using Linux on the Framework laptop. After a month of using it as my daily driver, I have some thoughts.</p>
+<h3>Speed</h3>
+<p>This thing is <em>fast</em>. No really, I've used the new M1 MacBook Pros and day to day this thing blows it out of the water; full stop, no comparison. Sure, you can look at the benchmarks, yada, yada, yada... Here is the thing. If I run Windows, it is going to be calling home to Redmond <em>all the time</em> which slows down a computer and makes it a rental for all intents and purposes. Same thing for Macs. On top of that &quot;Windows Defender&quot; and their security/malware scanning will slow down your PC. Windows and macOS feel bloated once you move to Linux on a modern laptop. I'm running <a href="https://archlinux.org/">Arch Linux</a> with Cinnamon desktop environment but really the distribution and Desktop Environment don't matter so much. I chose Arch Linux because I am very comfortable with the command line and it guarantees the newest kernel with driver support. If you want a more user friendly rolling release with newer kernel, I would suggest <a href="https://manjaro.org/">Manjaro</a>. Here is the thing, there is no lag for anything you do on this thing. Everything is faster from opening apps, to having multiple apps open and working.</p>
+<div style="display: flex; justify-content: center; margin: 25px 0;">
+    <picture><source type="image/webp" srcset="/assets/images/BxdFyVkoDK-300.webp 300w, /assets/images/BxdFyVkoDK-600.webp 600w" sizes="(min-width: 30em) 100vw, 100vw"><source type="image/jpeg" srcset="/assets/images/BxdFyVkoDK-300.jpeg 300w, /assets/images/BxdFyVkoDK-600.jpeg 600w" sizes="(min-width: 30em) 100vw, 100vw"><img alt="The News" loading="lazy" decoding="async" src="/assets/images/BxdFyVkoDK-300.jpeg" width="600" height="400"></picture>
+</div>
+<h3>Privacy</h3>
+<p>With everything going on in the world, it is wise to be more conscientious about your privacy online. Asking yourself what services you are using, what apps you utilize, etc... are wise questions in these days. Here is how the Framework Laptop and Linux have helped me be more privacy conscious:</p>
+<ol>
+<li>Hardware kill switch on camera and microphone</li>
+</ol>
+<ul>
+<li>I have the camera and microphone <em>off</em> at all times. If I need to do a video call, I'll turn them on; otherwise, they are <em>off</em>.</li>
+</ul>
+<ol start="2">
+<li>Getting off of data sucking apps<br>
+<em>Asking yourself what ecosystems you are stuck in and diversifying your software choices will go a long way to keeping you safe. My apps are the following:</em></li>
+</ol>
+<ul>
+<li>Bitwarden - Password Management</li>
+<li>Authy - Two Factor Auth</li>
+<li>Sublime Text - Code Editor (Version 4 is superb and fast)</li>
+<li>Brave for personal browsing and Firefox for development</li>
+<li>Spotify - Music</li>
+<li>Gimp - Image manipulation</li>
+<li>Outline - VPN</li>
+</ul>
+<p>This small set of tools really allows me to accomplish most of what I need on a computer. It is like a truck: utility first. I do still have Google Chrome as I need it from time to time to access a Google service but it stays closed most of the time which is a good feeling.</p>
+<h3>Upgradability</h3>
+<p>Consumerism is killing our souls. <em>Thinking</em> we need the latest and greatest is a temptation to all of us which is not only unhealthy but prevents us from focusing on the fundamentals. Having a laptop that is upgradable in every respect helps me think more simply about <em>needs</em> vs <em>wants</em>. This laptop is an i5 11th gen with 32gb RAM and 1TB NVMe SSD. I don't need more than this right now. The only thing I would change on this laptop is the screen. I prefer matte displays because I find them easier on the eyes. When one becomes available, I will buy it for the reasonable price it costs and pop off the magnetic screen bezel and drop it in. That is true consumer peace of mind and it makes me respect Framework as a company.</p>
+<p>Thank you Framework.</p>
+
+    </div>
+  </main>
+
+<footer>
+  <p>Copyright ©<span x-data="{ currentDate: new Date() }" x-text="currentDate.getFullYear()" TedMartin.us</p>
+</footer>
+
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Custom JS -->
+    <script src="/assets/js/scripts.js"></script>
+  </body>
+</html>
